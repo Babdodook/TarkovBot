@@ -1,4 +1,5 @@
 import discord
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -9,7 +10,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.name)
     print("ready")
-    game = discord.Game("테슷트")
+    game = discord.Game("^ㅁ^")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -260,4 +261,6 @@ async def on_message(message):
 
         await message.channel.send(embed=embed)
 
-client.run("Njc0MTIzOTAxMDk3NDc2MTE2.XjkUTQ.u3xJ4mrmgPCFrmKTaUqOvJheNQ0")
+
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
