@@ -256,7 +256,7 @@ async def on_message(message):
                         value='[HK416](https://i.imgur.com/XWhQhaz.png) / [M4A1](https://i.imgur.com/rbvZctq.png)',
                         inline=False)
         embed.add_field(name='DMR',
-                        value='[SKS](https://i.imgur.com/ci27SrM.png) / [M4A1](https://i.imgur.com/rbvZctq.png)',
+                        value='[SKS](https://i.imgur.com/ci27SrM.png)',
                         inline=False)
 
         await message.channel.send(embed=embed)
