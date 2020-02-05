@@ -26,7 +26,9 @@ async def on_message(message):
         embed.add_field(name='퀵 링크',
                         value='타르코프 공식사이트 [바로가기](https://www.escapefromtarkov.com/)\n'
                               '배틀스테이트 게임즈 트위터 [바로가기](https://twitter.com/bstategames?lang=ko/)\n'
-                              '디시인사이드 타르코프 갤러리 [바로가기](https://gall.dcinside.com/mgallery/board/lists/?id=eft)', inline=False)
+                              '디시인사이드 타르코프 갤러리 [바로가기](https://gall.dcinside.com/mgallery/board/lists/?id=eft)',
+                              '타르코프 위키 [바로가기](https://escapefromtarkov.gamepedia.com/Escape_from_Tarkov_Wiki)',
+                        inline=False)
         embed.add_field(name='-----------------------------명령어 리스트-----------------------------',
                         value='모든 명령어는 느낌표를 붙입니다\n\n', inline=False)
         embed.add_field(name='[지도]', value='!커스텀\n!쇼어라인\n!리저브\n!인터체인지\n!우드\n!팩토리\n!랩\n', inline=False)
@@ -236,7 +238,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     # 총기 모딩 정보
-    if message.content.startswith('!모딩'):
+        if message.content.startswith('!모딩'):
         embed = discord.Embed(
             title='Modding Information',
             description='※참고용일 뿐, 개인 취향에 맞게 모딩하는 것이 가장 좋습니다\n',
@@ -251,13 +253,37 @@ async def on_message(message):
                               '[AKMN](https://i.imgur.com/hBBnOu8.png) / [AKMSN](https://i.imgur.com/jIFiQ6M.png) / '
                               '[AKS-74U](https://i.imgur.com/D1ib4CU.png)',
                         inline=False)
-        # HK & M4A1
-        embed.add_field(name='HK & M4A1',
-                        value='[HK416](https://i.imgur.com/XWhQhaz.png) / [M4A1](https://i.imgur.com/rbvZctq.png)',
+        embed.add_field(name='Assault rifles',
+                        value='[MDR](https://i.imgur.com/P9kyNHr.png) / [SA-58](https://i.imgur.com/RQpale8.png) / '
+                              '[AS VAL](https://i.imgur.com/PKHVNZU.png) / [HK416](https://i.imgur.com/XWhQhaz.png) / '
+                              '[M4A1](https://i.imgur.com/rbvZctq.png)',
                         inline=False)
-        embed.add_field(name='DMR',
-                        value='[SKS](https://i.imgur.com/ci27SrM.png)',
+        embed.add_field(name='Assault carbines',
+                        value='[SKS](https://i.imgur.com/ci27SrM.png) / [TX-15](https://i.imgur.com/pXHbXFa.png) / '
+                              '[Hunter](https://i.imgur.com/WO7s9uO.png) / [ADAR](https://i.imgur.com/uIM3tQa.png)\n',
                         inline=False)
+        embed.add_field(name='Marksman rifles',
+                        value='[SR-25](https://i.imgur.com/0GiQ4j4.png) / [SVD](https://i.imgur.com/6Gy6dLQ.png) / '
+                              '[RSASS](https://i.imgur.com/ljsDAmk.png) / [M1A](https://i.imgur.com/xeYFZMu.png) / '
+                              '[VSS](https://i.imgur.com/HmMg26i.png)',
+                        inline=False)
+        embed.add_field(name='Bolt-action rifles',
+                        value='[T-5000](https://i.imgur.com/XSxmebO.png) / [SV-98](https://i.imgur.com/gM8SXP0.png) / '
+                              '[Mosin-sniper rifle](https://i.imgur.com/kGrczhj.png) / [DVL-10](https://i.imgur.com/'
+                              '9OqDlXI.png) / [Remington700](https://i.imgur.com/GRId0H1.png)',
+                        inline=False)
+        embed.add_field(name='SMGs',
+                        value='[MP9](https://i.imgur.com/3fBrLp1.png) / [MP5 Kurz](https://i.imgur.com/kzQp0nv.png) / '
+                              '[P90](https://i.imgur.com/c9Xh4go.png) / [MP5](https://i.imgur.com/mIzB46A.png)\n'
+                              '[MPX](https://i.imgur.com/grRDc9S.png) / [MP7](https://i.imgur.com/ATjqIHy.png) / '
+                              '[PP19](https://i.imgur.com/59PaubL.png)',
+                        inline=False)
+        embed.add_field(name='Shotguns',
+                        value='[MP-153](https://i.imgur.com/epQfJmI.png) / [TOZ](https://i.imgur.com/0WNYBP4.png) / '
+                              '[Saiga](https://i.imgur.com/ijdzN7K.png) / [M870](https://i.imgur.com/NB0KDPO.png)',
+                        inline=False)
+        embed.add_field(name='Shotguns',
+                        value='[RPK-16](https://i.imgur.com/oVBDqzQ.png)', inline=False)
 
         await message.channel.send(embed=embed)
 
