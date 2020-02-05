@@ -282,7 +282,7 @@ async def on_message(message):
                         value='[MP-153](https://i.imgur.com/epQfJmI.png) / [TOZ](https://i.imgur.com/0WNYBP4.png) / '
                               '[Saiga](https://i.imgur.com/ijdzN7K.png) / [M870](https://i.imgur.com/NB0KDPO.png)',
                         inline=False)
-        embed.add_field(name='Shotguns',
+        embed.add_field(name='Machine guns',
                         value='[RPK-16](https://i.imgur.com/oVBDqzQ.png)', inline=False)
 
         await message.channel.send(embed=embed)
