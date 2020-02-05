@@ -10,7 +10,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.name)
     print("ready")
-    game = discord.Game("^ㅁ^")
+    game = discord.Game("-")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -26,7 +26,7 @@ async def on_message(message):
         embed.add_field(name='퀵 링크',
                         value='타르코프 공식사이트 [바로가기](https://www.escapefromtarkov.com/)\n'
                               '배틀스테이트 게임즈 트위터 [바로가기](https://twitter.com/bstategames?lang=ko/)\n'
-                              '디시인사이드 타르코프 갤러리 [바로가기](https://gall.dcinside.com/mgallery/board/lists/?id=eft)',
+                              '디시인사이드 타르코프 갤러리 [바로가기](https://gall.dcinside.com/mgallery/board/lists/?id=eft)\n'
                               '타르코프 위키 [바로가기](https://escapefromtarkov.gamepedia.com/Escape_from_Tarkov_Wiki)',
                         inline=False)
         embed.add_field(name='-----------------------------명령어 리스트-----------------------------',
@@ -238,7 +238,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     # 총기 모딩 정보
-        if message.content.startswith('!모딩'):
+    if message.content.startswith('!모딩'):
         embed = discord.Embed(
             title='Modding Information',
             description='※참고용일 뿐, 개인 취향에 맞게 모딩하는 것이 가장 좋습니다\n',
@@ -282,7 +282,7 @@ async def on_message(message):
                         value='[MP-153](https://i.imgur.com/epQfJmI.png) / [TOZ](https://i.imgur.com/0WNYBP4.png) / '
                               '[Saiga](https://i.imgur.com/ijdzN7K.png) / [M870](https://i.imgur.com/NB0KDPO.png)',
                         inline=False)
-        embed.add_field(name='Machine guns',
+        embed.add_field(name='Shotguns',
                         value='[RPK-16](https://i.imgur.com/oVBDqzQ.png)', inline=False)
 
         await message.channel.send(embed=embed)
