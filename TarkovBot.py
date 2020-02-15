@@ -20,7 +20,7 @@ async def on_message(message):
     if message.content.startswith("!명령어"):
         embed = discord.Embed(
             title='☆★☆★☆★☆★탈붕이 등장☆★☆★☆★☆★',
-            description='Version 0.1 last updated 2020.02.04\n',
+            description='Version 0.2 last updated 2020.02.15\n',
             colour=discord.Colour.orange()
         )
         embed.add_field(name='퀵 링크',
@@ -34,6 +34,8 @@ async def on_message(message):
         embed.add_field(name='[지도]', value='!커스텀\n!쇼어라인\n!리저브\n!인터체인지\n!우드\n!팩토리\n!랩\n', inline=False)
         embed.add_field(name='[모딩]', value='!모딩 - 총기 모딩 정보를 보여줍니다\n', inline=False)
         embed.add_field(name='[탄 정보]', value='!탄 - 탄 정보를 보여줍니다\n', inline=False)
+        embed.add_field(name='[방어구 정보]', value='[바로가기](https://docs.google.com/spreadsheets/d/1FYTJlBVomct6-Fbh4'
+                                               'ZQejR3CW9_e8U0ix_MEA2s52jw/edit#gid=1745411392)', inline=False)
         embed.add_field(name='[게임 필터 설정]', value='!필터 - 엔비디아 게임 필터 정보를 보여줍니다\n', inline=False)
         embed.set_image(
             url="https://cdn.discordapp.com/attachments/666791720498757646/674149913835208704/319px-Killa_Portrait.gif")
@@ -70,7 +72,7 @@ async def on_message(message):
         #        "1.png?type=w800")
 
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/666791829148139551/666816837258051594/EFT_-__v0.12.2.5485.png")
+            url="https://cdn.discordapp.com/attachments/666780665244549180/674221773172113428/EFT_-_DC_v0.12.2.5485.png")
 
         await message.channel.send(embed=embed)
 
@@ -92,40 +94,18 @@ async def on_message(message):
             colour=discord.Colour.orange()
         )
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/661928575053594650/666116028832546816/8694d476643748c8.jpg")
+            url="https://cdn.discordapp.com/attachments/666780665244549180/674221854956978177/EFT_-_v0.12.2.5485.png")
 
         await message.channel.send(embed=embed)
 
     if message.content.startswith('!인터체인지'):
         embed = discord.Embed(
-            title='인터체인지 - 야외, 지하',
+            title='인터체인지 지도',
             description='',
             colour=discord.Colour.orange()
         )
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/666791829148139551/666818008156733440/unknown-2.png")
-
-        await message.channel.send(embed=embed)
-
-    if message.content.startswith('!인터체인지'):
-        embed = discord.Embed(
-            title='인터체인지 - 1층',
-            description='',
-            colour=discord.Colour.orange()
-        )
-        embed.set_image(
-            url="https://cdn.discordapp.com/attachments/666791829148139551/666818128902094859/unknown-1.png")
-
-        await message.channel.send(embed=embed)
-
-    if message.content.startswith('!인터체인지'):
-        embed = discord.Embed(
-            title='인터체인지 - 2층',
-            description='',
-            colour=discord.Colour.orange()
-        )
-        embed.set_image(
-            url="https://cdn.discordapp.com/attachments/666791829148139551/666818269461872681/unknown-3.png")
+            url="https://cdn.discordapp.com/attachments/666780665244549180/674221802297229342/EFT_-_v0.12.2.5485.png")
 
         await message.channel.send(embed=embed)
 
@@ -244,6 +224,11 @@ async def on_message(message):
             description='※참고용일 뿐, 개인 취향에 맞게 모딩하는 것이 가장 좋습니다\n',
             colour=discord.Colour.orange()
         )
+        # 모딩 사이트
+        embed.add_field(name='모딩 사이트',
+                        value='[바로가기](https://docs.google.com/spreadsheets/d/1yHyVEVB5oN0qL_pR1qTNP1_ICmzJ3'
+                              'SCFJQNb6XDM_DQ/htmlview#gid=0)',
+                        inline=False)
         # AK 시리즈
         embed.add_field(name='AK Series',
                         value='[AK101](https://i.imgur.com/n0CUuSn.png) / [AK102](https://i.imgur.com/nFg6tEb.png) / '
