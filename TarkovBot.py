@@ -10,7 +10,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.name)
     print("ready")
-    game = discord.Game("킬라소환")
+    game = discord.Game("존버")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -20,14 +20,19 @@ async def on_message(message):
     if message.content.startswith("!명령어"):
         embed = discord.Embed(
             title='☆★☆★☆★☆★탈붕이 등장☆★☆★☆★☆★',
-            description='Version 0.2 last updated 2020.02.15\n',
+            description='Version 0.3 last updated 2020.02.27\n'
+                        ':: Last update log ::\n'
+                        '필터 정보를 나명 필터 정보로 수정\n'
+                        '탄 이미지 최신 탄약 차트로 수정\n'
+                        '퀵 링크에 시세 확인 사이트 추가\n',
             colour=discord.Colour.orange()
         )
         embed.add_field(name='퀵 링크',
                         value='타르코프 공식사이트 [바로가기](https://www.escapefromtarkov.com/)\n'
                               '배틀스테이트 게임즈 트위터 [바로가기](https://twitter.com/bstategames?lang=ko/)\n'
                               '디시인사이드 타르코프 갤러리 [바로가기](https://gall.dcinside.com/mgallery/board/lists/?id=eft)\n'
-                              '타르코프 위키 [바로가기](https://escapefromtarkov.gamepedia.com/Escape_from_Tarkov_Wiki)',
+                              '타르코프 위키 [바로가기](https://escapefromtarkov.gamepedia.com/Escape_from_Tarkov_Wiki)\n'
+                              '플리 마켓 시세 확인 사이트 [바로가기](https://tarkov-market.com/)\n',
                         inline=False)
         embed.add_field(name='-----------------------------명령어 리스트-----------------------------',
                         value='모든 명령어는 느낌표를 붙입니다\n\n', inline=False)
@@ -189,7 +194,7 @@ async def on_message(message):
                               '-iKERMXd9FVkSmSq83qn8/edit#gid=64053005)\n\n', inline=False)
 
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/649762983798505480/673108569029083136/viewimage.png")
+            url="https://cdn.discordapp.com/attachments/666791829148139551/675746760752365609/80b24e11d2e0fe6b.png")
 
         await message.channel.send(embed=embed)
 
@@ -197,12 +202,11 @@ async def on_message(message):
     if message.content.startswith('!필터'):
         embed = discord.Embed(
             title='NVIDIA Game Filter Information',
-            description='인게임에서 Alt + F3으로 필터창 띄운 뒤 설정',
+            description='인게임에서 Alt + F3으로 필터창 띄운 뒤 설정\n ※나명 필터입니다',
             colour=discord.Colour.orange()
         )
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/661928575053594650/664762903811063808/eft-20200109-"
-                "012318-003.png")
+            url="https://cdn.discordapp.com/attachments/666791829148139551/680267449987629089/1.PNG")
 
         await message.channel.send(embed=embed)
 
@@ -213,7 +217,29 @@ async def on_message(message):
             colour=discord.Colour.orange()
         )
         embed.set_image(
-            url="https://cdn.discordapp.com/attachments/661928575053594650/664762903811063810/eft-20200109-012321-004.png")
+            url="https://cdn.discordapp.com/attachments/666791829148139551/680267465464479788/2.PNG")
+
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith('!필터'):
+        embed = discord.Embed(
+            title='',
+            description='',
+            colour=discord.Colour.orange()
+        )
+        embed.set_image(
+            url="https://cdn.discordapp.com/attachments/666791829148139551/680267474532302888/3.PNG")
+
+        await message.channel.send(embed=embed)
+
+    if message.content.startswith('!필터'):
+        embed = discord.Embed(
+            title='',
+            description='',
+            colour=discord.Colour.orange()
+        )
+        embed.set_image(
+            url="https://cdn.discordapp.com/attachments/666791829148139551/680267486507171840/4.PNG")
 
         await message.channel.send(embed=embed)
 
@@ -275,3 +301,4 @@ async def on_message(message):
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
+
